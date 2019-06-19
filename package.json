@@ -2,7 +2,7 @@
   "name": "news_scraper",
   "version": "1.0.0",
   "description": "Unit 18 Homework",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
