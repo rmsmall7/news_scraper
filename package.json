@@ -29,6 +29,6 @@
     "note": "^1.2.1",
     "request": "^2.88.0"
   },
-  "main": "index.js",
+  "main": "server.js",
   "devDependencies": {}
 }
