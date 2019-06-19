@@ -2,9 +2,7 @@
   "name": "news_scraper",
   "version": "1.0.0",
   "description": "Unit 18 Homework",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
+  "main": "server.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +23,8 @@
     "mongoose": "^5.6.0",
     "morgan": "^1.9.1",
     "request": "^2.88.0"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
