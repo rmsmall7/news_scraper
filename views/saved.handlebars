@@ -1,31 +1,42 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a href="/saved" class="nav-brand">Saved Articles</a>
+{{> header }}
+
+<div class="container-fluid article-container">
+{{#if article}}
+  {{#each article}}
+      <div data-_id={{this._id}} class="card">
+      <div class="card-header">
+        <h3>
+          <a class="article-link" target="_blank" rel="noopener noreferrer" href={{this.url}}>{{this.headline}}</a>
+          <a class="btn btn-danger delete">Delete From Saved</a>
+          <a class="btn btn-info notes">Article Notes</a>
+        </h3>
+      </div>
+      <div class="card-body">{{this.summary}}</div>
     </div>
-    <ul class="nav nav-bar">
-      <li><a href="/">Home</a></li>
-      <li class="active"><a href="/saved" class="saved">Saved Articles</a></li>
-    </ul>
-  </div>
-</nav>
-<div class="jumbtron text-center">
-  <div class="overlay"></div>
-  <div class="background-image"></div>
-  <div class="caption">
-    <h1>Saved Articles</h1>
-    <p>Your Saved Articles</p>
-  </div>
+  {{/each}}
 </div>
-<div class="container-fluid article-container"></div>
-
-<footer class="footer">
-  <div class="container">
-    <p>New York Times Mongo Scraper</p>
+{{else}}
+  <div class='alert alert-warning text-center'>
+    <h4>Uh Oh. Looks like we don't have any new articles.</h4>
   </div>
-</footer>
+  <div class="card">
+    <div class="card-header text-center">
+      <h3>What Would You Like To Do?</h3>
+    </div>
+    <div class="card-body text-center">
+      <h4>
+        <a class="scrape-new">Try Scraping New Articles</a>
+      </h4>
+      <h4>
+        <a href="/saved">Go to Saved Articles</a>
+      </h4>
+    </div>
+  </div>
+{{/if}}
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="../public/assets/javascript/saved.js"></script>
+{{> footer }}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+<script src="assets/javascript/saved.js"></script>

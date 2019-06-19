@@ -2,15 +2,10 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var noteSchema = new Schema({
-  headlineID: {
-    type: Schema.Types.ObjectId,
-    ref: "Headline"
-  },
-  date: String,
+var NoteSchema = new Schema({
   noteText: String
 });
 
-var Note = mongoose.model("Note", noteSchema);
+var Note = mongoose.model("Note", NoteSchema);
 
 module.exports = Note;
