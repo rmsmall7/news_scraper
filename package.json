@@ -2,8 +2,7 @@
   "name": "news_scraper",
   "version": "1.0.0",
   "description": "Unit 18 Homework",
-  "main": "server.js"
-  },
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rmsmall7/news_scraper.git"
