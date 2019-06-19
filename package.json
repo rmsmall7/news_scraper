@@ -2,7 +2,9 @@
   "name": "news_scraper",
   "version": "1.0.0",
   "description": "Unit 18 Homework",
-  "main": "server.js",
+   "engine": {
+    "node": "11.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rmsmall7/news_scraper.git"
@@ -21,6 +23,7 @@
     "express-handlebars": "^3.1.0",
     "mongoose": "^5.6.0",
     "morgan": "^1.9.1",
+    "note": "^1.2.1",
     "request": "^2.88.0"
   },
   "scripts": {
