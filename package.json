@@ -2,8 +2,11 @@
   "name": "news_scraper",
   "version": "1.0.0",
   "description": "Unit 18 Homework",
-   "engine": {
+  "engine": {
     "node": "11.6.0"
+  },
+  "scripts": {
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +29,6 @@
     "note": "^1.2.1",
     "request": "^2.88.0"
   },
-  "scripts": {
-    "start": "node server.js"
-  }
+  "main": "index.js",
+  "devDependencies": {}
 }
